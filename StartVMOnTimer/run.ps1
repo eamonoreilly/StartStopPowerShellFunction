@@ -8,6 +8,14 @@ $VMResourceGroupName = "Contoso"
 
 # Stop on error
 $ErrorActionPreference = 'stop'
+
+# Check if managed identity has been enabled and granted access to a subscription, resource group, or resource
+$AzContext = Get-AzContext -ErrorAction SilentlyContinue
+if (-not $AzContext.Subscription.Id)
+{
+     Throw ("Managed identity is not enabled for this app or it has not been granted access to any Azure resources. Please see https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity for additional details.")
+}
+
 try 
 {
     # Get a single vm, vms in a resource group, or all vms in the subscription
