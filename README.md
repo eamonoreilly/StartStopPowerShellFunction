@@ -1,3 +1,8 @@
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2feamonoreilly%2fStartStopPowerShellFunction%2fmaster%2fazuredeploy.json) 
+<a href="http://armviz.io/#/?load=https%3a%2f%2fraw.githubusercontent.com%2feamonoreilly%2fStartStopPowerShellFunction%2fmaster%2fazuredeploy.json" target="_blank">
+    <img src="http://armviz.io/visualizebutton.png"/>
+</a>
+
 # Sample to start / stop VMs on a schedule
 
 Create an Azure function application and deploy functions that starts or stops virtual machines in the specified resource group, subscription, or by tag on a schedule.
